@@ -46,3 +46,15 @@ Thumbs.db
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
+##############################
+#### FMOD Generated Files ####
+##############################
+Assets/FMODAssets/*
+Assets/StreamingAssets/*
+Assets/StreamingAssets.meta
+Assets/FMODStudioCache.asset
+Assets/FMODStudioCache.asset.meta
+Assets/FMODStudioCache.meta
+fmod_editor.log
+fmod.log
+Assets/Resources/*
