@@ -4,30 +4,30 @@ using UnityEngine;
 
 public class Helicopter : MonoBehaviour
 {
-    public float Speed =0.5; 
+    public float Speed = 0.5f; 
+
+    public Rigidbody2D body;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        body = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKey ("d")) {
-            transform.position  = new Vector3(transform.position.x +Speed, transform.position.y, 0);
+            body.AddForce(Vector3.right * Speed);
         } 
         if (Input.GetKey ("a")) {
-            transform.position  = new Vector3(transform.position.x -Speed, transform.position.y, 0);
+            body.AddForce(Vector3.left * Speed);
         } 
         if (Input.GetKey ("w")) {
-            transform.position  = new Vector3(transform.position.x , transform.position.y+Speed,0); 
+            body.AddForce(Vector3.up * Speed);
         } 
         if (Input.GetKey ("s")) {
-            transform.position  = new Vector3(transform.position.x , transform.position.y-Speed, 0);
-            
-        } 
-            
+            body.AddForce(Vector3.down * Speed);
+        }   
     }
 }
