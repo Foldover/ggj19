@@ -17,10 +17,10 @@ public class MusicPlayer : GenericSingleton<MusicPlayer>
 	private void InitializeAudio()
 	{
 		musicController = AudioManager.Instance.InitializeAudioOnObject(this.gameObject, _Fmod.Events.Music.musicController);
-		musicController.Play();
+		AudioManager.Instance.PlayEmitterOnce(musicController);
 
 		ambienceController = AudioManager.Instance.InitializeAudioOnObject(this.gameObject, _Fmod.Events.Misc.ambController);
-		ambienceController.Play();
+		AudioManager.Instance.PlayEmitterOnce(ambienceController);
 
 		s_onPause = AudioManager.Instance.InitializeAudioOnObject(this.gameObject, _Fmod.Snapshots.onPause);
 	}

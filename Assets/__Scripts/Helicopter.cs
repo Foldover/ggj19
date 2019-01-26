@@ -5,17 +5,16 @@ using UnityEngine;
 public class Helicopter : MonoBehaviour
 {
     public float Speed = 0.5f; 
-
     public Rigidbody2D body;
 
     // Start is called before the first frame update
     void Start()
     {
         body = gameObject.GetComponent<Rigidbody2D>();
-    }
+	}
 
-    // Update is called once per frame
-    void Update()
+	// Update is called once per frame
+	void Update()
     {
         if (Input.GetKey ("d")) {
             body.AddForce(Vector3.right * Speed);
@@ -28,6 +27,6 @@ public class Helicopter : MonoBehaviour
         } 
         if (Input.GetKey ("s")) {
             body.AddForce(Vector3.down * Speed);
-        }   
+        }
     }
 }

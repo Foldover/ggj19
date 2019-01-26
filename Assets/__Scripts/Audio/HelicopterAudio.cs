@@ -1,42 +1,58 @@
-using System;
-using System.Linq.Expressions;
-using FMOD;
 using UnityEngine;
 
 namespace Audio
 {
-    public class HelicopterAudio : MonoBehaviour
-    {
-        private Rigidbody2D rigidbody2D;
-        private float previousFmodEventParameterValue = float.MinValue;
-        [SerializeField] private float hysteresis;
-        
-        private void Awake()
-        {
-            rigidbody2D = GetComponent<Rigidbody2D>();
-        }
+	public class HelicopterAudio : MonoBehaviour
+	{
+		private Rigidbody2D rigidbod2D;
+		private float previousFmodEventParameterValue = float.MinValue;
+		[SerializeField] private float hysteresis;
 
-        private void Update()
-        {
-            var velocityMagnitude = rigidbody2D.velocity.magnitude;
-            var fmodEventParameterValue = velocityToFMODEventParameterTransform(velocityMagnitude);
-            
-            if (shouldUpdateParameterValue(fmodEventParameterValue))
-            {
-                //TODO: Send parameter value to fmod event or something   
-            }
-        }
+		private FMODUnity.StudioEventEmitter helicopterSound;
 
-        private float velocityToFMODEventParameterTransform(float velocityMagnitude)
-        {
-            throw new NotImplementedException();
-        }
+		private void Awake()
+		{
+			rigidbod2D = GetComponent<Rigidbody2D>();
+		}
 
-        private bool shouldUpdateParameterValue(float newFmodEventParameterValue)
-        {
-            var minusHysteresis = previousFmodEventParameterValue - hysteresis;
-            var plusHysteresis = previousFmodEventParameterValue + hysteresis;
-            return newFmodEventParameterValue < minusHysteresis || newFmodEventParameterValue > plusHysteresis;
-        }
-    }
+		private void OnEnable()
+		{
+			if (!helicopterSound)
+			{
+				helicopterSound = AudioManager.Instance.InitializeAudioOnObject(gameObject, "event:/helicopter");
+			}
+
+			AudioManager.Instance.PlayEmitterOnce(helicopterSound);
+		}
+
+		private void OnDisable()
+		{
+			helicopterSound?.Stop();
+		}
+
+		private void Update()
+		{
+			var velocityMagnitude = rigidbod2D.velocity.magnitude;
+			var fmodEventParameterValue = VelocityToFMODEventParameterTransform(velocityMagnitude);
+
+			Debug.Log(fmodEventParameterValue);
+
+			if (ShouldUpdateParameterValue(fmodEventParameterValue))
+			{
+				helicopterSound.SetParameter("velocity", fmodEventParameterValue); //TODO: get velocity from the rigidbody pls.
+			}
+		}
+
+		private float VelocityToFMODEventParameterTransform(float velocityMagnitude)
+		{
+			return velocityMagnitude;
+		}
+
+		private bool ShouldUpdateParameterValue(float newFmodEventParameterValue)
+		{
+			var minusHysteresis = previousFmodEventParameterValue - hysteresis;
+			var plusHysteresis = previousFmodEventParameterValue + hysteresis;
+			return newFmodEventParameterValue < minusHysteresis || newFmodEventParameterValue > plusHysteresis;
+		}
+	}
 }
