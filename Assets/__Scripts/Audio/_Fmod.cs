@@ -16,7 +16,7 @@ public class _Fmod
 
 		public struct Misc
 		{
-			public const string ambController = "event:/Misc/ambienceController";
+			public const string ambController = "event:/ambienceController";
 			public const string throwWhoosh = "event:/Misc/throwWhoosh";
 			public const string onLevelEnd = "event:/Misc/onLevelEnd";
 			public const string onLevelStart = "event:/Misc/onLevelStart";
@@ -33,7 +33,7 @@ public class _Fmod
 
 		public struct Music
 		{
-			public const string musicController = "event:/Music/musicController";
+			public const string musicController = "event:/musicController";
 		}
 	}
 

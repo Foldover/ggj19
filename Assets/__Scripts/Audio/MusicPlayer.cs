@@ -1,5 +1,4 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MusicPlayer : GenericSingleton<MusicPlayer>
@@ -12,7 +11,7 @@ public class MusicPlayer : GenericSingleton<MusicPlayer>
 	{
 		InitializeAudio();
 		PlayMusicAndAmbience();
-		SetLevelAudio(SceneManager.GetActiveScene().buildIndex);	//TODO: Fix a better implementation.
+		SetLevelAudio(1);	//TODO: Fix a better implementation.
 	}
 
 	private void InitializeAudio()
@@ -38,7 +37,10 @@ public class MusicPlayer : GenericSingleton<MusicPlayer>
 
 	private void OnSceneLoaded(Scene level, LoadSceneMode loadingMode)
 	{
-		SetLevelAudio(level.buildIndex);
+		if (level.name == "Main" || level.name == "testFmod")
+		{
+			SetLevelAudio(1);
+		}
 	}
 
 	/// <summary> Start audio if it isn't already playing. </summary>
@@ -53,7 +55,7 @@ public class MusicPlayer : GenericSingleton<MusicPlayer>
 	/// <summary> Change ambience and music depending on in-game level. </summary>
 	private void SetLevelAudio(int levelBuildIndex)
 	{
-		ambienceController.SetParameter(_Fmod.Params.variation, levelBuildIndex);
+		ambienceController.SetParameter(_Fmod.Params.song, levelBuildIndex);
 		musicController.SetParameter(_Fmod.Params.song, levelBuildIndex);
 	}
 
