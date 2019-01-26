@@ -23,6 +23,7 @@ public class _Fmod
 			public const string onLevelRestart = "event:/Misc/onLevelRestart";
 			public const string hookPickup = "event:/hookPickup";
 			public const string hookDrop = "event:/hookDrop";
+			public const string blockCollision = "event:/blockCollision";
 		}
 
 		public struct UI
