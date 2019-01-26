@@ -43,8 +43,19 @@ public class Hook : MonoBehaviour
 		{
 			pickedUpItem = nonStaticColliders.First().attachedRigidbody;
 			pickedUpItem.isKinematic = true;
-			pickedUpItem.transform.SetParent(GetComponent<Transform>());
-			pickedUpItem.transform.localPosition = new Vector3();
+            var differanceToChopper = pickedUpItem.transform.position - transform.position;
+            pickedUpItem.transform.position = transform.position;
+            pickedUpItem.transform.SetParent(GetComponent<Transform>());
+            
+            //var joints = pickedUpItem.GetComponents<Joint2D>().ToList();
+            //while(joints.Any()) {
+            //    joints = new System.Collections.Generic.List<Joint2D>();
+            //    foreach (var joint in joints) {
+            //        var connectedBodyPosition = new Vector3(joint.connectedBody.position.x, joint.connectedBody.position.y, 0);
+            //        joint.connectedBody.position = connectedBodyPosition + differanceToChopper;
+            //        joints.AddRange(joint.connectedBody.GetComponents<Joint2D>());
+            //    }
+            //}
 
 			//Success Pickup sound
 			AudioManager.Instance.PlayOneShot3D(_Fmod.Events.Misc.hookPickup, transform.position, _Fmod.Params.variation, 1f);
