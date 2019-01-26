@@ -10,24 +10,32 @@ using Debug = UnityEngine.Debug;
 public class HouseComparer : MonoBehaviour {
     public Camera BlueprintCamera;
     public Camera HouseCamera;
-    public float TotalDiff;
+    public int score;
 
     private void Update() {
         BlueprintCamera.Render();
-        var pixels1 = getPixelsFromRenderTexture(BlueprintCamera.targetTexture);
+        var targetPixels = getPixelsFromRenderTexture(BlueprintCamera.targetTexture);
         HouseCamera.Render();
-        var pixels2 = getPixelsFromRenderTexture(HouseCamera.targetTexture);
-        TotalDiff = 0;
-        for (var i = 0; i < pixels1.Length; i++) {
-            var leftPixel = pixels1[i];
-            var rightPixel = pixels2[i];
-            var diffRRaw = leftPixel.r - rightPixel.r;
-            var diffR = Mathf.Abs(leftPixel.r - rightPixel.r);
-            var diffG = Mathf.Abs(leftPixel.g - rightPixel.g);
-            var diffB = Mathf.Abs(leftPixel.b - rightPixel.b);
-            var pixelDiff = diffR + diffG + diffB;
-            TotalDiff += pixelDiff;
+        var actualPixels = getPixelsFromRenderTexture(HouseCamera.targetTexture);
+        float totalDiff = 0;
+        var comparedPixels = 0;
+        for (var i = 0; i < targetPixels.Length; i++) {
+            var targetPixel = targetPixels[i];
+            var actualPixel = actualPixels[i];
+            if (targetPixel.Compare(Color.black))
+                continue; 
+            if (actualPixel.Compare(Color.black)){
+                totalDiff += 1;
+            }
+            comparedPixels += 1;
         }
+
+        if (comparedPixels == 0) {
+            score = 100;
+            return;
+        }
+        score = (int) (Math.Round(100 - (totalDiff / (float)comparedPixels) * 100.0f) );
+        score = (int) Mathf.Clamp(Mathf.Pow(score, 1.1f), 0 , 100);
     }
 
     private Color[] getPixelsFromRenderTexture(RenderTexture renderTexture) {
