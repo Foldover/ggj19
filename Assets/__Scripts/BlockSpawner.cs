@@ -38,5 +38,6 @@ public class BlockSpawner : MonoBehaviour
         GameObject block = Instantiate(buildingBlockPrefab, this.transform.position, Quaternion.identity);
         StickyBlock sticky = block.AddComponent<StickyBlock>();
         sticky.color = Colors[Random.Range(0, Colors.Length)];
+        block.GetComponent<Renderer>().material.SetColor("_Color", sticky.color);
     }
 }
