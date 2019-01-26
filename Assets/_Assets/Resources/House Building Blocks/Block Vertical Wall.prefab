@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5455662053513187730}
   - component: {fileID: 5455662053513187729}
   - component: {fileID: 5455662053513187728}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Block Vertical Wall
   m_TagString: House Building Block
   m_Icon: {fileID: 0}

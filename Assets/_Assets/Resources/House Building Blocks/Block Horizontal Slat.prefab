@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4825176159265326852}
   - component: {fileID: 6581999887123694958}
   - component: {fileID: 5651241232673737371}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Block Horizontal Slat
   m_TagString: House Building Block
   m_Icon: {fileID: 0}
