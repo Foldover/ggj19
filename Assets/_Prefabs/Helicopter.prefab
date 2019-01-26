@@ -70,8 +70,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b68d5c00792426448f493814e29e3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickedUpItem: {fileID: 0}
-  pickUpCollider: {fileID: 0}
 --- !u!1 &427299958108120161
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2cb43fd8681b52009a62e09d64a4c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 80
 --- !u!50 &7821446862754573750
 Rigidbody2D:
   serializedVersion: 4
