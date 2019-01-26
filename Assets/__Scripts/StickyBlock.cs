@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class StickyBlock : MonoBehaviour
 {
-    public string color;
+    public Color color;
 
 
     void OnCollisionEnter2D(Collision2D collision)

@@ -8,10 +8,10 @@ public class BlockSpawner : MonoBehaviour
     public static GameObject[] AvailableBlocks;
 
 
-    public static string[] Colors = {
-      "Red",
-      "Blue",
-      "Green"
+    public static Color[] Colors = {
+      Color.red,
+      Color.blue,
+      Color.green
     };
 
 
@@ -19,6 +19,7 @@ public class BlockSpawner : MonoBehaviour
     {
          AvailableBlocks = Resources.LoadAll<GameObject>("House Building Blocks");
          print("Loaded " + AvailableBlocks.Length + " building blocks");
+         Spawn();
     }
 
 
@@ -26,11 +27,16 @@ public class BlockSpawner : MonoBehaviour
     {
         if (collider.gameObject.tag == "House Building Block")
         {
-          print("Stick!");
-          GameObject buildingBlockPrefab = AvailableBlocks[Random.Range(0, AvailableBlocks.Length)];
-          GameObject block = Instantiate(buildingBlockPrefab, this.transform.position, Quaternion.identity);
-          StickyBlock sticky = block.AddComponent<StickyBlock>();
-          sticky.color = Colors[Random.Range(0, Colors.Length)];
+          Spawn();
         }
+    }
+
+
+    void Spawn()
+    {
+        GameObject buildingBlockPrefab = AvailableBlocks[Random.Range(0, AvailableBlocks.Length)];
+        GameObject block = Instantiate(buildingBlockPrefab, this.transform.position, Quaternion.identity);
+        StickyBlock sticky = block.AddComponent<StickyBlock>();
+        sticky.color = Colors[Random.Range(0, Colors.Length)];
     }
 }
