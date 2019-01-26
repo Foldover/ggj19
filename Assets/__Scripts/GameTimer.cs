@@ -19,11 +19,11 @@ namespace DefaultNamespace
         {
             var now = Time.time;
             var timeLeft = maxTime - (now - startTime);
-            text.text = string.Format("{0}:{1}", minutes(timeLeft), seconds(timeLeft));
             if (timeLeft < 0)
             {
                 reloadScene();
             }
+            text.text = string.Format("{0}:{1}", minutes(timeLeft), seconds(timeLeft));
         }
         
         private void resetTimer()
