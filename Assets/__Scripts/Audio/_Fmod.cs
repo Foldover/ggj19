@@ -9,9 +9,9 @@ public class _Fmod
 	{
 		public struct Bunny
 		{
-			public const string death = "";
-			public const string cheer = "";
-			public const string speak = "";
+			public const string death = testEvent;
+			public const string cheer = testEvent;
+			public const string speak = testEvent;
 		}
 
 		public struct Misc
@@ -21,6 +21,8 @@ public class _Fmod
 			public const string onLevelEnd = "event:/Misc/onLevelEnd";
 			public const string onLevelStart = "event:/Misc/onLevelStart";
 			public const string onLevelRestart = "event:/Misc/onLevelRestart";
+			public const string hookPickup = "event:/hookPickup";
+			public const string hookDrop = "event:/hookDrop";
 		}
 
 		public struct UI
@@ -44,14 +46,9 @@ public class _Fmod
 
 	public struct Params
 	{
-		public const string testParam = "test";
-		public const string item = "item";
+		public const string velocity = "velocity";
 		public const string material = "material";
-		public const string sneezeLevel = "sneezeLevel";
 		public const string song = "song";
-		public const string sporeLevel = "sporeLevel";
 		public const string variation = "variation";
-		public const string pollutionInhale = "pollutionInhale";
-		public const string pollutionStregth = "pollutionStrength";
 	}
 }
