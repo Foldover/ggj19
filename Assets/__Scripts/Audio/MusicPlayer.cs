@@ -60,14 +60,14 @@ public class MusicPlayer : GenericSingleton<MusicPlayer>
 	public void OnPauseBegin()
 	{
 		s_onPause.Play();
-		AudioManager.Instance.PauseBusAudio(AudioManager.AudioBusses.sfxInGameBus, true);
+		AudioManager.Instance.PauseBusAudio(AudioManager.AudioBusses.SfxInGameBus, true);
 		musicController.SetParameter("vaporwave", 1f);
 	}
 
 	public void OnPauseEnd()
 	{
 		s_onPause.Stop();
-		AudioManager.Instance.PauseBusAudio(AudioManager.AudioBusses.sfxInGameBus, false);
+		AudioManager.Instance.PauseBusAudio(AudioManager.AudioBusses.SfxInGameBus, false);
 		musicController.SetParameter("vaporwave", 0f);
 	}
 }

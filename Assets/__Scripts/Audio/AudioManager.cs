@@ -2,17 +2,13 @@
 
 public class AudioManager : GenericSingleton<AudioManager>
 {
-
-
 	#region BUSSES
-	public enum AudioBusses { mainBus, musicBus, sfxBus, sfxInGameBus }
+	public enum AudioBusses { MainBus, MusicBus, SfxBus, SfxInGameBus }
 	private FMOD.Studio.Bus masterBus;
 	private FMOD.Studio.Bus musicBus;
 	private FMOD.Studio.Bus sfxBus;
 	private FMOD.Studio.Bus sfxInGameBus;
-	private float busVolumeToSet = 1;
 	#endregion BUSSES
-
 
 	private void Awake()
 	{
@@ -43,15 +39,15 @@ public class AudioManager : GenericSingleton<AudioManager>
 	{
 		switch (busToMute)
 		{
-			case AudioBusses.mainBus:
+			case AudioBusses.MainBus:
 				masterBus.setMute(mute);
 				break;
 
-			case AudioBusses.musicBus:
+			case AudioBusses.MusicBus:
 				musicBus.setMute(mute);
 				break;
 
-			case AudioBusses.sfxBus:
+			case AudioBusses.SfxBus:
 				sfxBus.setMute(mute);
 				break;
 
@@ -67,18 +63,18 @@ public class AudioManager : GenericSingleton<AudioManager>
 	{
 		switch (busToPause)
 		{
-			case AudioBusses.mainBus:
+			case AudioBusses.MainBus:
 				masterBus.setPaused(setPaused);
 				break;
 
-			case AudioBusses.musicBus:
+			case AudioBusses.MusicBus:
 				musicBus.setPaused(setPaused);
 				break;
 
-			case AudioBusses.sfxBus:
+			case AudioBusses.SfxBus:
 				sfxBus.setPaused(setPaused);
 				break;
-			case AudioBusses.sfxInGameBus:
+			case AudioBusses.SfxInGameBus:
 				sfxInGameBus.setPaused(setPaused);
 				break;
 
@@ -92,51 +88,44 @@ public class AudioManager : GenericSingleton<AudioManager>
 	/// <para></para> 0 == No volume, -80 dB.
 	/// <para></para> 1 == Max volume, 0 dB (or the level set in the Fmod-project?)
 	/// </summary>
-	public void SetAudioVolume(AudioBusses busToChangeVolumeOn, float volumeToChangeWith)
+	public void SetBusVolume(AudioBusses bus, float volumeToChangeWith)
 	{
-		busVolumeToSet += volumeToChangeWith;
+		float newBusVolume = Mathf.Clamp01(GetBusVolume(bus) + volumeToChangeWith);
 
-		if (busVolumeToSet > 1)
-			busVolumeToSet = 1;
-
-		if (busVolumeToSet < 0)
-			busVolumeToSet = 0;
-
-		switch (busToChangeVolumeOn)
+		switch (bus)
 		{
-			case AudioBusses.mainBus:
-				masterBus.setVolume(busVolumeToSet);
+			case AudioBusses.MainBus:
+				masterBus.setVolume(newBusVolume);
 				break;
 
-			case AudioBusses.musicBus:
-				musicBus.setVolume(busVolumeToSet);
+			case AudioBusses.MusicBus:
+				musicBus.setVolume(newBusVolume);
 				break;
 
-			case AudioBusses.sfxBus:
-				sfxBus.setVolume(busVolumeToSet);
+			case AudioBusses.SfxBus:
+				sfxBus.setVolume(newBusVolume);
 				break;
 
 			default:
 				break;
 		}
-		//print(busVolumeToSet);
 	}
 
-	public float GetAudioVolume(AudioBusses bus)
+	public float GetBusVolume(AudioBusses bus)
 	{
 		float volume = 0;
 		float final;
 		switch (bus)
 		{
-			case AudioBusses.mainBus:
+			case AudioBusses.MainBus:
 				masterBus.getVolume(out volume, out final);
 				break;
 
-			case AudioBusses.musicBus:
+			case AudioBusses.MusicBus:
 				musicBus.getVolume(out volume, out final);
 				break;
 
-			case AudioBusses.sfxBus:
+			case AudioBusses.SfxBus:
 				sfxBus.getVolume(out volume, out final);
 				break;
 
