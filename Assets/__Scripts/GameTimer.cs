@@ -23,7 +23,10 @@ namespace DefaultNamespace
             {
                 reloadScene();
             }
-            text.text = string.Format("{0}:{1}", minutes(timeLeft), seconds(timeLeft));
+            else
+            {
+                text.text = string.Format("{0}:{1}", minutes(timeLeft), seconds(timeLeft));   
+            }
         }
         
         private void resetTimer()
