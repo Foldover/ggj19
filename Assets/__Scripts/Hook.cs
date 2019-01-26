@@ -65,6 +65,6 @@ public class Hook : MonoBehaviour
 		pickedUpItem = null;
 
 		//Drop sound
-		AudioManager.Instance.PlayOneShot3D(_Fmod.Events.Misc.hookDrop, transform.position, _Fmod.Params.variation, 0f);
+		AudioManager.Instance.PlayOneShot3D(_Fmod.Events.Misc.hookDrop, transform.position, _Fmod.Params.variation, 1f);
 	}
 }
