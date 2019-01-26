@@ -24,7 +24,7 @@ public class Helicopter : MonoBehaviour
 		{
 			body.AddForce(Vector3.up * speed);
 		}
-		if (Input.GetKey("s"))
+		if (Input.GetKey("s") && transform.position.y > -2.2f) 
 		{
 			body.AddForce(Vector3.down * speed);
 		}
