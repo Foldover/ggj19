@@ -32,6 +32,8 @@ public class Hook : MonoBehaviour {
             } else {
                 pickedUpItem.isKinematic = false;
                 pickedUpItem.transform.parent = null;
+                pickedUpItem.gameObject.AddComponent<DropEffect>();
+                pickedUpItem.GetComponent<Rigidbody2D>().gravityScale = 8f;
                 pickedUpItem = null;
             }
         }
