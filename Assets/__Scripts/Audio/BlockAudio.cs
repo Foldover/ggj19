@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Audio
@@ -7,7 +8,7 @@ namespace Audio
 
         void PlayImpactSound()
         {
-            
+            throw new NotImplementedException();
         }
     }
 }

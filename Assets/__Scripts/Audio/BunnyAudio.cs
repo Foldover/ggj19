@@ -16,12 +16,12 @@ namespace Audio
 
         void PlayBunnyCheer()
         {
-        
+        throw new NotImplementedException();
         }
 
         void PlayBunnySpeech()
         {
-            
+            throw new NotImplementedException();
         }
     }    
 }
