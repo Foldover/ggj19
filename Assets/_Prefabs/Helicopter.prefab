@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 4776148849208758019}
   - component: {fileID: 4776148849208758031}
   - component: {fileID: 7821446862754573750}
+  - component: {fileID: 9068383808965733316}
   m_Layer: 0
   m_Name: Helicopter
   m_TagString: Untagged
@@ -242,8 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2cb43fd8681b52009a62e09d64a4c39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 80
-  body: {fileID: 0}
+  speed: 0.5
 --- !u!50 &7821446862754573750
 Rigidbody2D:
   serializedVersion: 4
@@ -265,6 +265,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &9068383808965733316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4776148849208758028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0ac4cbba6e4e27af562c31af6c118a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hysteresis: 0
 --- !u!1 &8035900686632261732
 GameObject:
   m_ObjectHideFlags: 0

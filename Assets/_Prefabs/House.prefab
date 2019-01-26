@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 864215954742194707}
   - component: {fileID: 864215954742194716}
   m_Layer: 0
-  m_Name: Traingle
+  m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,6 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d010a7825a73efc6b48856b9d0ef662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 8ae644adb85351d45a5c089d8b25828c, type: 2}
 --- !u!1 &4004005175027842379
 GameObject:
   m_ObjectHideFlags: 0
