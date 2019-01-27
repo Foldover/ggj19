@@ -27,7 +27,7 @@ namespace DefaultNamespace
             }
             else
             {
-                text.text = string.Format("{0}:{1}", minutes(timeLeft), seconds(timeLeft));   
+                text.text = string.Format("Time left: {0}:{1}", minutes(timeLeft), seconds(timeLeft));   
             }
 			text.color = Color.Lerp(initialColor, Color.red, (1 - timeLeft / maxTime));
 		}
