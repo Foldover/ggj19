@@ -81,6 +81,7 @@ namespace DefaultNamespace
 
         private void OnGameEnd()
         {
+			AudioManager.Instance.PlayOneShot("event:/endReaction");
 			Instantiate(endUiPrefab, mainTimerCanvas.transform);
 			Instantiate(endStarSpawners);
 			Invoke("ReloadScene", 3f);
