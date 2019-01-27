@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6794940016467485458}
   - component: {fileID: 6794940016467485456}
   m_Layer: 5
-  m_Name: EndScreen
+  m_Name: EndUIScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is the best house ever for Bunny!!!
+  m_Text: This is the best house ever!!!
 --- !u!114 &6794940017679718521
 MonoBehaviour:
   m_ObjectHideFlags: 0
