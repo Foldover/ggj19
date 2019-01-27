@@ -27,10 +27,21 @@ namespace DefaultNamespace
 		private void Start()
 		{
 			houseComparer = FindObjectOfType<HouseComparer>();
+			Cursor.visible = false;
 		}
 
 		private void Update()
 		{
+			if (Input.GetKeyDown(KeyCode.Escape))
+			{
+				SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+			}
+
+			if (Input.GetKeyDown(KeyCode.F5))
+			{
+				OnGameEnd();
+			}
+
 			var now = Time.time;
 			var timeLeft = maxTime - (now - startTime);
 			if (timeLeft < 0 || houseComparer.score == 100)

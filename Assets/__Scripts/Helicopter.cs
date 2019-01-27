@@ -12,19 +12,19 @@ public class Helicopter : MonoBehaviour
 
 	private void Update()
 	{
-		if (Input.GetKey("d"))
+		if (Input.GetKey("d") || Input.GetKey(KeyCode.RightArrow))
 		{
 			body.AddForce(Vector3.right * speed);
 		}
-		if (Input.GetKey("a"))
+		if (Input.GetKey("a") || Input.GetKey(KeyCode.LeftArrow))
 		{
 			body.AddForce(Vector3.left * speed);
 		}
-		if (Input.GetKey("w"))
+		if (Input.GetKey("w") || Input.GetKey(KeyCode.UpArrow))
 		{
 			body.AddForce(Vector3.up * speed);
 		}
-		if (Input.GetKey("s") && transform.position.y > -2.2f) 
+		if ((Input.GetKey("s") && transform.position.y > -2.2f || Input.GetKey(KeyCode.DownArrow) && transform.position.y > -2.2f)) 
 		{
 			body.AddForce(Vector3.down * speed);
 		}
