@@ -13,6 +13,7 @@ public class ExcitedBunny : MonoBehaviour
 
 	private void Start()
 	{
+		excitedAudio = AudioManager.Instance.InitializeAudioOnObject(gameObject, "event:/excitedBunny");
 		animator = GetComponent<Animator>();
 		houseComparer = FindObjectOfType<HouseComparer>();
 		currentScore = houseComparer.score;
@@ -35,7 +36,7 @@ public class ExcitedBunny : MonoBehaviour
 	{
 		animator.SetBool("excited", true);
 		Invoke("MakeIdle", 1.5f);
-
+		AudioManager.Instance.PlayEmitterOnce(excitedAudio);
 	}
 
 	public void MakeIdle()
