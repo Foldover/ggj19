@@ -1028,6 +1028,36 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1298486478632100418, guid: c9454fa4469e1fcbe8553b2c7e632e6f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 125.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298486478632100418, guid: c9454fa4469e1fcbe8553b2c7e632e6f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -61.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298486478632100418, guid: c9454fa4469e1fcbe8553b2c7e632e6f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 210.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298486478632100418, guid: c9454fa4469e1fcbe8553b2c7e632e6f,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 102.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298486478632100429, guid: c9454fa4469e1fcbe8553b2c7e632e6f,
+        type: 3}
+      propertyPath: m_FontData.m_MaxSize
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1298486478632100429, guid: c9454fa4469e1fcbe8553b2c7e632e6f,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9454fa4469e1fcbe8553b2c7e632e6f, type: 3}
 --- !u!1 &1848013845
@@ -1228,6 +1258,56 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3526906916193263917, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.57254905
+      objectReference: {fileID: 0}
+    - target: {fileID: 3526906916193263917, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Actual Goal: Crash the game'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909702797680362576, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 877
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909702797680362576, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -578
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909702797680362576, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071065
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909702797680362576, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071071
+      objectReference: {fileID: 0}
+    - target: {fileID: 3909702797680362576, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666709803938299778, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_EffectColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666709803938299778, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_EffectDistance.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666709803938299778, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_EffectDistance.y
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 5193320048525882358, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
         type: 3}
       propertyPath: m_Name
@@ -1298,5 +1378,63 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5193320050059917194, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_Text
+      value: 100%
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193320050059917194, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193320050059917195, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 834
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193320050059917195, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -66
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193320050059917192, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_Name
+      value: Percentage
+      objectReference: {fileID: 0}
+    - target: {fileID: 691275479, guid: f8abc3a8e5fa13129b13ceb62d6ee26a, type: 3}
+      propertyPath: m_EffectDistance.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 691275479, guid: f8abc3a8e5fa13129b13ceb62d6ee26a, type: 3}
+      propertyPath: m_EffectDistance.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 691275479, guid: f8abc3a8e5fa13129b13ceb62d6ee26a, type: 3}
+      propertyPath: m_EffectColor.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8abc3a8e5fa13129b13ceb62d6ee26a, type: 3}
+--- !u!1 &2112105227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1298486478632100419, guid: c9454fa4469e1fcbe8553b2c7e632e6f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1412569257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2112105231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112105227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 4, y: -4}
+  m_UseGraphicAlpha: 1

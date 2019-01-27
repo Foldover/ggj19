@@ -9,11 +9,13 @@ namespace DefaultNamespace
         private float startTime;
         [SerializeField] private int maxTime;
         [SerializeField] private Text text;
+        private Color initialColor;
 
         private void Awake()
         {
             resetTimer();
-        }
+			initialColor = text.color;
+		}
 
         private void Update()
         {
@@ -27,7 +29,8 @@ namespace DefaultNamespace
             {
                 text.text = string.Format("{0}:{1}", minutes(timeLeft), seconds(timeLeft));   
             }
-        }
+			text.color = Color.Lerp(initialColor, Color.red, (1 - timeLeft / maxTime));
+		}
         
         private void resetTimer()
         {
