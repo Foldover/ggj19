@@ -10,34 +10,49 @@ namespace DefaultNamespace
         [SerializeField] private int maxTime;
         [SerializeField] private Text text;
         private Color initialColor;
+		private HouseComparer houseComparer;
 
-        private void Awake()
+		public GameObject mainTimerCanvas;
+		public GameObject endUiPrefab;
+
+		private void Awake()
         {
-            resetTimer();
+            ResetTimer();
 			initialColor = text.color;
 		}
 
-        private void Update()
+		private void Start()
+		{
+			houseComparer = FindObjectOfType<HouseComparer>();
+		}
+
+		private void Update()
         {
-            var now = Time.time;
+			if (Input.GetKeyDown(KeyCode.Alpha5))
+			{
+				OnGameEnd();
+			}
+
+
+			var now = Time.time;
             var timeLeft = maxTime - (now - startTime);
-            if (timeLeft < 0)
+            if (timeLeft < 0 || houseComparer.score == 100)
             {
-                reloadScene();
+                OnGameEnd();
             }
             else
             {
-                text.text = string.Format("Time left: {0}:{1}", minutes(timeLeft), seconds(timeLeft));   
+                text.text = string.Format("Time left: {0}:{1}", Minutes(timeLeft), Seconds(timeLeft));   
             }
 			text.color = Color.Lerp(initialColor, Color.red, (1 - timeLeft / maxTime));
 		}
         
-        private void resetTimer()
+        private void ResetTimer()
         {
             startTime = Time.time;
         }
 
-        private string minutes(float time)
+        private string Minutes(float time)
         {
             var minutes = Mathf.FloorToInt(time / 60.0f);
             if (minutes < 10)
@@ -50,7 +65,7 @@ namespace DefaultNamespace
             }
         }
 
-        private string seconds(float time)
+        private string Seconds(float time)
         {
             var seconds = (int)(time % 60.0f);
             if (seconds < 10)
@@ -63,9 +78,15 @@ namespace DefaultNamespace
             }
         }
 
-        private void reloadScene()
+        private void OnGameEnd()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+			Instantiate(endUiPrefab, mainTimerCanvas.transform);
+			Invoke("ReloadScene", 3f);
         }
-    }
+
+		private void ReloadScene()
+		{
+			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		}
+	}
 }

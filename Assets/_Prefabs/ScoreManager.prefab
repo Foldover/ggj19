@@ -599,7 +599,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Build a house for the bunnies!
+  m_Text: Build a house for Yellow Bunny!
 --- !u!114 &3666709803938299778
 MonoBehaviour:
   m_ObjectHideFlags: 0

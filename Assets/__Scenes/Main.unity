@@ -1271,6 +1271,17 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 1298486478559158880, guid: c9454fa4469e1fcbe8553b2c7e632e6f,
+        type: 3}
+      propertyPath: endUiPrefab
+      value: 
+      objectReference: {fileID: 6794940016467485548, guid: 7a830699a8b790c4a964bf359290fe64,
+        type: 3}
+    - target: {fileID: 1298486478559158880, guid: c9454fa4469e1fcbe8553b2c7e632e6f,
+        type: 3}
+      propertyPath: mainTimerCanvas
+      value: 
+      objectReference: {fileID: 1821172057}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9454fa4469e1fcbe8553b2c7e632e6f, type: 3}
 --- !u!1 &1509453947
@@ -1303,6 +1314,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1821172057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1298486480236679268, guid: c9454fa4469e1fcbe8553b2c7e632e6f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1412569257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1821991347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1533,6 +1550,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5193320048525882358, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_Name
+      value: ScoreManager
+      objectReference: {fileID: 0}
     - target: {fileID: 3526906916193263917, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
         type: 3}
       propertyPath: m_Color.a
@@ -1567,11 +1589,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90.00001
-      objectReference: {fileID: 0}
-    - target: {fileID: 5193320048525882358, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
-        type: 3}
-      propertyPath: m_Name
-      value: ScoreManager
       objectReference: {fileID: 0}
     - target: {fileID: 5193320048525882353, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
         type: 3}
@@ -1687,6 +1704,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Percentage
+      objectReference: {fileID: 0}
+    - target: {fileID: 5983652421869580575, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -72.49997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8abc3a8e5fa13129b13ceb62d6ee26a, type: 3}
