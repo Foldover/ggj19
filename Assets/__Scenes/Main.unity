@@ -201,12 +201,12 @@ PrefabInstance:
     - target: {fileID: 864215952758998619, guid: e20fc05ff50337b34b151a8bec1ccc73,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.27
+      value: 6.27
       objectReference: {fileID: 0}
     - target: {fileID: 864215952758998619, guid: e20fc05ff50337b34b151a8bec1ccc73,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.28
+      value: -4.51
       objectReference: {fileID: 0}
     - target: {fileID: 864215952758998619, guid: e20fc05ff50337b34b151a8bec1ccc73,
         type: 3}
@@ -256,12 +256,12 @@ PrefabInstance:
     - target: {fileID: 1770409632978616051, guid: e20fc05ff50337b34b151a8bec1ccc73,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.22
+      value: 0.23
       objectReference: {fileID: 0}
     - target: {fileID: 1770409632978616051, guid: e20fc05ff50337b34b151a8bec1ccc73,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.76
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 4631996676684838435, guid: e20fc05ff50337b34b151a8bec1ccc73,
         type: 3}
@@ -271,7 +271,7 @@ PrefabInstance:
     - target: {fileID: 4631996676684838435, guid: e20fc05ff50337b34b151a8bec1ccc73,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.85
+      value: -1.37
       objectReference: {fileID: 0}
     - target: {fileID: 864215954742194707, guid: e20fc05ff50337b34b151a8bec1ccc73,
         type: 3}
@@ -1288,6 +1288,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5193320048525882358, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
+        type: 3}
+      propertyPath: m_Name
+      value: ScoreManager
+      objectReference: {fileID: 0}
     - target: {fileID: 3526906916193263917, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
         type: 3}
       propertyPath: m_Color.a
@@ -1337,11 +1342,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_EffectDistance.y
       value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5193320048525882358, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
-        type: 3}
-      propertyPath: m_Name
-      value: ScoreManager
       objectReference: {fileID: 0}
     - target: {fileID: 5193320048525882353, guid: f8abc3a8e5fa13129b13ceb62d6ee26a,
         type: 3}
