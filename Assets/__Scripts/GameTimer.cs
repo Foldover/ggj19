@@ -75,7 +75,7 @@ namespace DefaultNamespace
 			}
 		}
 
-		private void OnGameEnd()
+		public void OnGameEnd()
 		{
 			if (hasEnded)
 			{
