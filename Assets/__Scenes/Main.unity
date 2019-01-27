@@ -1282,6 +1282,12 @@ PrefabInstance:
       propertyPath: mainTimerCanvas
       value: 
       objectReference: {fileID: 1821172057}
+    - target: {fileID: 1298486478559158880, guid: c9454fa4469e1fcbe8553b2c7e632e6f,
+        type: 3}
+      propertyPath: endStarSpawners
+      value: 
+      objectReference: {fileID: 3574673760789232728, guid: 980a7e028bd37cd48b68e159753b343c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9454fa4469e1fcbe8553b2c7e632e6f, type: 3}
 --- !u!1 &1509453947

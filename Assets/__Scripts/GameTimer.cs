@@ -14,6 +14,7 @@ namespace DefaultNamespace
 
 		public GameObject mainTimerCanvas;
 		public GameObject endUiPrefab;
+		public GameObject endStarSpawners;
 
 		private void Awake()
         {
@@ -81,6 +82,7 @@ namespace DefaultNamespace
         private void OnGameEnd()
         {
 			Instantiate(endUiPrefab, mainTimerCanvas.transform);
+			Instantiate(endStarSpawners);
 			Invoke("ReloadScene", 3f);
         }
 
