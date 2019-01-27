@@ -8,11 +8,11 @@ public class ScoreGUI : MonoBehaviour
 
     private void Awake()
     {
-        scoreText.text = $"Similarity: {0}%";
+        scoreText.text = $"House Awesomeness {0}%";
     }
 
     private void Update()
     {
-        scoreText.text = $"Similarity: {houseComparer.score}%";
+        scoreText.text = $"House Awesomeness {houseComparer.score}%";
     }
 }
